@@ -2,13 +2,16 @@
   "name": "clone-app",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:5000",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "NODE_ENV=env/.env.development next dev",
+    "build": "NODE_ENV=env/.env.development next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "axios": "^0.27.2",
+    "dotenv": "^16.0.3",
     "next": "12.3.1",
     "react": "18.2.0",
     "react-dom": "18.2.0"
