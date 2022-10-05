@@ -37,7 +37,7 @@ function Signup() {
 
     const signUpData = await callService(
       "POST",
-      `${process.env.domainAPI}/auth/signup`,
+      `${process.env.domainAPI}/auth/signup/`,
       inputData,
       { token: null }
     );
