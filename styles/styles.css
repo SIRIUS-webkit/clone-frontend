@@ -2,6 +2,10 @@
   margin: 0;
   padding: 0;
 }
+body {
+  max-width: 1200px;
+  margin: 20px auto;
+}
 .middle {
   margin-top: 4em;
   display: flex;
@@ -48,4 +52,20 @@
   .wrapper-outer {
     grid-template-columns: 1fr;
   }
+}
+.nav-header {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-item {
+  display: flex;
+  align-items: center;
+}
+.login-container {
+  max-width: 680px;
+  margin: 0 auto;
 }

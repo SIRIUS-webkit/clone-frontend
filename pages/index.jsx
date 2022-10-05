@@ -43,7 +43,10 @@ export default function Home() {
         "POST",
         `${process.env.domainAPI}/posts/`,
         inputData,
-        { token: null }
+        {
+          token:
+            "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImxhbW90ZTFAZ21haWwuY29tIiwiaWQiOiI2MzNkMDE1OWE3MmQwMWM3YzA5OGFhM2QiLCJpYXQiOjE2NjQ5NDI3MzIsImV4cCI6MTY2NDk0NjMzMn0.H77SFXK89TAiMmj5y01u-7XDecqAoS-p2f19-YsogZ0",
+        }
       );
       if (createposts.status === 201) {
         const posts = await callService(
