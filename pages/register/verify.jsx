@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+/* eslint-disable */
+import React, { useEffect } from "react";
 import { useRouter } from "next/router";
 import Cookies from "js-cookie";
 import callService from "../../function/callService";

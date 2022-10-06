@@ -1,3 +1,4 @@
+/* eslint-disable */
 import "../styles/styles.css";
 import Layout from "../components/Layout/Layout";
 import wrapper from "../redux/store";

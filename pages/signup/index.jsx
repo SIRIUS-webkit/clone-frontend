@@ -1,7 +1,7 @@
+/* eslint-disable */
 import React, { useState } from "react";
 import callService from "../../function/callService";
 import { useRouter } from "next/router";
-import Cookies from "js-cookie";
 
 function Signup() {
   const router = useRouter();
