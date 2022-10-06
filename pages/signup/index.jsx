@@ -42,8 +42,7 @@ function Signup() {
       { token: null }
     );
     if (signUpData.status === 200) {
-      Cookies.set("token", signUpData.data.token);
-      router.push("/");
+      router.push("/register/registerCompleted");
     } else {
       setErrMsg(signUpData.data.message);
     }

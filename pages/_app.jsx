@@ -2,7 +2,7 @@ import "../styles/styles.css";
 import Layout from "../components/Layout/Layout";
 import wrapper from "../redux/store";
 import { useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { UPDATE_USER } from "../redux/types";
 import Cookies from "js-cookie";
 import callService from "../function/callService";
@@ -10,9 +10,11 @@ import callService from "../function/callService";
 function MyApp({ Component, pageProps }) {
   const dispatch = useDispatch();
   const token = Cookies.get("token");
+  const user = useSelector((state) => state.user);
+  console.log(user);
   useEffect(() => {
     async function getUserProfile() {
-      if (token) {
+      if (token && token !== "undefined" && !user?.name) {
         const userData = await callService(
           "GET",
           `${process.env.domainAPI}/auth/profile/`,

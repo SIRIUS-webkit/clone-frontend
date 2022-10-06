@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import { useDispatch, useSelector } from "react-redux";
 import Cookies from "js-cookie";
 import { USER_LOGOUT } from "../redux/types";
+import Link from "next/link";
 
 function Navbar() {
   const router = useRouter();
@@ -25,7 +26,9 @@ function Navbar() {
   return (
     <div className="nav-header">
       <div>
-        <h1>LOGO</h1>
+        <Link href="/">
+          <h1>LOGO</h1>
+        </Link>
       </div>
       <div className="nav-item">
         <h3 style={{ marginRight: "20px" }}>{user.name}</h3>
